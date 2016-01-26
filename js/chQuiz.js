@@ -8,7 +8,7 @@
 		var amountCorrect = 0;
 		var amountWrong = 0;
 		var score = 0;
-		for(i=1: i < 10; i++ ){
+		for(i=0: i < 10; i++ ){
 			
 			var choices = document.getElementByName('q' + i);
 			
@@ -17,7 +17,6 @@
 				{
 					var selection = choices[j];
 						if(selection.value == "correct" && selection.checked){
-							window.alert("yes")
 							amountCorrect++;
 						}else if(selection.value == "incorrect" && selection.checked){
 							amountWrong++;
@@ -27,7 +26,9 @@
 			
 		}	
 		score = 5 * amountCorrect;
-		window.alert("")
+		window.alert("Amount Correct: " + amountCorrect
+					+ "\nAmount Wrong: " + amountWrong
+					+ "\nScore: " + score);
 		
 		
 		
